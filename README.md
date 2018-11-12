@@ -5,7 +5,7 @@ This version will include two e-sports (Counter-Strike: Global Offensive and Lea
 
 Each type of sport/esport will have its own module/component.
 
-### Electron Frontend
+### Electron
 
 - Login Page
     - Provides basic login/sign up functions to the Node.js backend
@@ -27,7 +27,7 @@ Each type of sport/esport will have its own module/component.
     - Displays the teams upcoming matches
     - Allows the user (if logged in) to follow
 
-### Node.js Backend
+### Backend (can be implemented in Electron too)
 
 - Login/Sign up
 - User schema (if we decided to use MongoDB)

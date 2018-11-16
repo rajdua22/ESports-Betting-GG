@@ -1,9 +1,13 @@
 {
   "name": "esports-betting",
   "version": "1.0.0",
-  "main": "src/main.js",
+  "main": "main.js",
   "repository": "git@github.com:Tony1023/ESports-Betting-GG.git",
   "scripts": {
     "start": "electron ."
-  }
+  },
+  "devDependencies": {
+    "electron": "^3.0.9"
+  },
+  "dependencies": {}
 }

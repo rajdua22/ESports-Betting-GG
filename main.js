@@ -1,8 +1,31 @@
 const {app, BrowserWindow, Menu} = require('electron');
-const { ipcMain } = require('electron');
+const {ipcMain} = require('electron');
+const {session} = require('electron');
+const mysql = require('mysql');
+const sqlSecretes = require('./src/credentials.js');
+
+let conn = mysql.createConnection(sqlSecretes);
+
+conn.connect(err => {
+  console.log(err);
+});
+
+let template = [{}, {
+  label: 'Game Type',
+  submenu: [{
+    label: 'CS:GO',
+    click: () => {}
+  }, {
+    label: 'LOL',
+    click: () => {}
+  }, {
+    label: 'NBA',
+    click: () => {}
+  }]
+}];
 
 const init = () => {
-  Menu.setApplicationMenu();
+  const menu = Menu.buildFromTemplate(template);
   let window = createWindow({
     title: 'ESports Betting Odds',
     width: 1000,
@@ -13,6 +36,10 @@ const init = () => {
   window.loadFile('./view/index.html');
   window.on('closed', () => app.quit() );
 }
+
+ipcMain.on('login-succeed', (event, args) => {
+  console.log(args);
+});
 
 const createWindow = params => {
   const win = new BrowserWindow(params)

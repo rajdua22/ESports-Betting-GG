@@ -1,3 +1,6 @@
+# Secret Files
+credentials.js
+
 # Logs
 logs
 *.log

@@ -1,17 +1,17 @@
 # Esports Betting
 
 ## Project Outline v.1
-This version will include two e-sports (Counter-Strike: Global Offensive and League of Legends) and one sport (NBA).
+This version will include two e-sports (Counter-Strike: Global Offensive and League of Legends).
 
 Each type of sport/esport will have its own module/component.
 
 ### Electron
 
 - Login Page
-    - Provides basic login/sign up functions to the Node.js backend
-    - Ask about which one is the favorite sport
+    - Provides basic login/sign up functions to the sql server
 
 - Matches Page
+    - Defaults to be CS:GO, have a menu to choose from CS:GO and LOL
     - This will be game-type specific
     - Displays matches that users can click to see details (match detail page)
     - Can have a simple layout that displays upcoming/ongoing matches info w/ or w/o the current scores. The page should also provide functionality to query upcoming matches by team.
@@ -30,14 +30,18 @@ Each type of sport/esport will have its own module/component.
 ### Backend (can be implemented in Electron too)
 
 - Login/Sign up
-- User schema (if we decided to use MongoDB)
-```javascript
-{
-    username: "username",
-    password: "password",
-    favorite: "LOL",
-    LOLTeams: [],
-    CSGOTeams: [],
-    NBATeams: []
-}
-```
+- Database: MySQL
+- user Table:
+
+| user_id | username | password |
+| ------ | ------ | ------ |
+| 1 | tony1023 | password |
+
+- user_teams Table:
+
+| user_id | team_name | game_type |
+| ------ | ------ | ------ |
+| 1 | 'Natus Vincere' | 1 |
+
+
+ 

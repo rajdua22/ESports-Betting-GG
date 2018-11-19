@@ -7,7 +7,7 @@ Each type of sport/esport will have its own module/component.
 
 ### Electron
 
-- Login Page
+- Login Page (OPTIONAL)
     - Provides basic login/sign up functions to the sql server
 
 - Matches Page
@@ -27,7 +27,7 @@ Each type of sport/esport will have its own module/component.
     - Displays the teams upcoming matches
     - Allows the user (if logged in) to follow
 
-### Backend (can be implemented in Electron too)
+### Backend (can be implemented in Electron too) (OPTIONAL!!)
 
 - Login/Sign up
 - Database: MySQL

@@ -11,6 +11,7 @@ ipc.on('change-game', (e, args) => {
   func[args]();
 });
 
+// populate the page with csgo matches
 function csgoFetch() {
   let tag = document.createElement('div');
   tag.className = 'match';

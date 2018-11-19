@@ -1,8 +1,6 @@
 const {app, BrowserWindow, Menu} = require('electron');
 const {ipcMain} = require('electron');
 const {session} = require('electron');
-const mysql = require('mysql');
-const sqlSecretes = require('./src/credentials.js');
 
 let currentGame = 1; // 1 for CSGO, 2 for LOL
 
@@ -31,9 +29,10 @@ const init = () => {
     width: 1000,
     height: 800
   });
-  
+  const menu = Menu.buildFromTemplate(template);
+  Menu.setApplicationMenu(menu);
   window.setResizable(false);
-  window.loadFile('./view/index.html');
+  window.loadFile('./view/matches.html');
   window.on('closed', () => app.quit() );
 }
 

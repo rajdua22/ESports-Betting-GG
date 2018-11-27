@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: #34495e;
+    background-color:  #1fc7ca;
     color: white;
 }
 
@@ -27,8 +27,8 @@ body {
 }
 
 .crypto-img {
-    width: 35px;
-    height: 35px;
+    width: 50px;
+    height: 50px;
     vertical-align: middle;
     margin-right: 5px;
 }
@@ -43,6 +43,7 @@ body {
 
 .crypto-change {
     text-align: right;
+    font-size:15px;
     padding-right: 40px;
 }
 
@@ -50,7 +51,7 @@ body {
     display: block;
     padding: 10px;
     color: white;
-    background-color: #e67e22;
+    background-color: #3971eb;
     border: none;
     border-radius: 5px;
 }

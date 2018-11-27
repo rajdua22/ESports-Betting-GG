@@ -22,10 +22,15 @@ ipc.on('crypto-data', function (event, arg) {
     const league = amatch.league.name
     const status  = amatch.status
     const img = amatch.league.image_url
+    const link = amatch.league.url
+    const games = amatch.number_of_games
+
     document.getElementById('main').innerHTML = `
     <img class="img" src="${img}">
     <div class="name">Match: ${myName}</div>
-    <div class="league">League: ${league}</div>    
+    <div class = "league">Games: ${games}</div>
+    <div class="league">League: ${league}</div>
     <div class ="league">Status: ${status}</div>
-    `
+    <div class = "league">Link: ${link}</div>
+     `
 })

@@ -13,7 +13,7 @@ function refreshTable(arg){
     for(const match in arg){
         const tmatch = arg[match]
         const img = tmatch.league.image_url
-        const league = tmatch.league.name
+        const sport = tmatch.videogame.name
         const series = tmatch.serie.full_name
         let newElement = `
         <div class="crypto">
@@ -21,7 +21,7 @@ function refreshTable(arg){
                 <img class="crypto-img" src  = "${img}"/>
                 <span class="crypto-name">${tmatch.name}</span>
             </div>
-            <div class="crypto-price">League: ${league}</div>
+            <div class="crypto-price">Sport: ${sport}</div>
             <div class="crypto-change ${series}">${tmatch.begin_at}</div>
             <button class="btn btn-popout" id="btn-popup-${tmatch.slug}">More Info</button>
         </div>`

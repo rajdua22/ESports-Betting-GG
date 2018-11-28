@@ -13,7 +13,7 @@ function initialize () {
   Menu.setApplicationMenu(null)
   watchCrypto()
   
-  let window = createWindow({ title: 'E-Sports', width: 800, height: 600, resizable: false })
+  let window = createWindow({ title: 'E-Bet', width: 800, height: 600, resizable: false })
   window.loadFile('./src/index.html')
   window.webContents.on('did-finish-load', () => {
     window.webContents.send('crypto-data', cryptoData)

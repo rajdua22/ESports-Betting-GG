@@ -1,7 +1,7 @@
 # Esports Betting
 
 ## Project Outline v.1
-This version will include three e-sports (Counter-Strike: Global Offensive, Dota 2 and League of Legends).
+This version will include four e-sports (Overwatch, Counter-Strike: Global Offensive, Dota 2 and League of Legends).
 
 Each type of sport/esport will have its own module/component.
 

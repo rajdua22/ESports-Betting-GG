@@ -15,6 +15,7 @@ function refreshTable(arg){
         const img = tmatch.league.image_url
         const sport = tmatch.videogame.name
         const series = tmatch.serie.full_name
+        const time = tmatch.begin_at
         let newElement = `
         <div class="crypto">
             <div class="crypto-info">
@@ -22,7 +23,7 @@ function refreshTable(arg){
                 <span class="crypto-name">${tmatch.name}</span>
             </div>
             <div class="crypto-price">Sport: ${sport}</div>
-            <div class="crypto-change ${series}">${tmatch.begin_at}</div>
+            <div class="crypto-change ${series}">${time.substring(5, 10)}    ${time.substring(11,19)}</div>
             <button class="btn btn-popout" id="btn-popup-${tmatch.slug}">More Info</button>
         </div>`
         document.getElementById('main').innerHTML += newElement
